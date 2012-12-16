@@ -1,0 +1,45 @@
+[user]
+	name = Andrew Guenther
+	email = guenther.andrew.j@gmail.com
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = red reverse
+    local = blue
+    remote = green
+
+[color "diff"]
+    meta = cyan bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[alias]
+    s = status -s
+    sh = show
+    a = add
+    c = commit
+    p = pull
+    d = diff
+    st = stash
+    sp = stash pop
+    sl = stash list
+    sd = stash drop
+    lg = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%C(red)%d\\ %C(reset)%s%C(blue)\\ [%cn]" --decorate --date=relative --graph
+    lgs = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%C(red)%d\\ %C(reset)%s%C(blue)\\ [%cn]" --decorate --date=relative --stat
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+    la = "!git config -l | grep alias | cut -c 7-"

@@ -1,0 +1,26 @@
+" Set tabs
+set tabstop=3
+set shiftwidth=3
+set expandtab
+
+" Line numbers
+set nu
+
+" Colorscheme
+colorscheme molokai
+
+" Set JSON filed to be handled as javascript
+autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.zsh-theme set ft=sh
+
+" Configure localvimrc to not ask for confirmation
+let g:localvimrc_ask=0
+
+" Run Pathogen
+call pathogen#infect()
+
+" Syntastic config
+"let g:syntastic_check_on_open=1
+
+" Re-indent entire file
+map <tab> mzgg=G`z<CR> 
