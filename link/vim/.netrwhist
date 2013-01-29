@@ -1,10 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/andrew/classes/csc580/spoons/trunk/src/com/spoons/util'
-let g:netrw_dirhist_2='/home/andrew/classes/csc580/spoons/trunk/src/com/spoons/util/math'
-let g:netrw_dirhist_3='/home/andrew/classes/csc580/spoons/trunk/src/com/spoons/control/drivers'
-let g:netrw_dirhist_4='/home/andrew/classes/csc580/spoons/trunk/src/com/spoons/control'
-let g:netrw_dirhist_5='/home/andrew/classes/csc580/spoons/trunk/src/com/spoons'
-let g:netrw_dirhist_6='/home/andrew/classes/csc580/spoons/trunk/src/com/spoons/classify'
-let g:netrw_dirhist_7='/home/andrew/dotfiles/link/oh-my-zsh/themes'
-let g:netrw_dirhist_8='/home/andrew/dotfiles/link/oh-my-zsh/plugins/history-substring-search'
+let g:netrw_dirhist_cnt =0

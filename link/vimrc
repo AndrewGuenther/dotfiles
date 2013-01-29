@@ -2,6 +2,20 @@
 set tabstop=3
 set shiftwidth=3
 set expandtab
+set smartindent
+set softtabstop=3
+filetype indent plugin on
+
+" Add omnicompletion
+filetype plugin on
+set ofu=syntaxcomplete#Complete
+
+" Smart home and smart end
+noremap <expr> <Home> (col('.') == matchend(getline('.'), '^\s*')+1 ? '0' : '^')
+noremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$' : 'g_')
+vnoremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$h' : 'g_')
+imap <Home> <C-o><Home>
+imap <End> <C-o><End>
 
 " Line numbers
 set nu
@@ -23,4 +37,11 @@ call pathogen#infect()
 "let g:syntastic_check_on_open=1
 
 " Re-indent entire file
-map <tab> mzgg=G`z<CR> 
+map <tab> mzgg=G`z<CR>
+
+" Color lines which are too long
+if exists('+colorcolumn')
+     set colorcolumn=100
+else
+     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
+endif
