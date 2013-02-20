@@ -23,6 +23,13 @@ imap <End> <C-o><End>
 " Line numbers
 set nu
 
+" Set folding to syntax mode and add shortcut
+set foldmethod=syntax
+set foldlevelstart=50
+nmap \f za
+nmap \F zR
+nmap \FF zM
+
 " Color lines which are too long
 if exists('+colorcolumn')
    set colorcolumn=100
@@ -58,3 +65,16 @@ set encoding=utf-8
 
 " Re-indent entire file
 map <tab> mzgg=G`z<CR>
+
+" Open NERDTree on startup
+autocmd VimEnter * NERDTreeToggle
+autocmd BufEnter * NERDTreeMirror
+
+autocmd VimEnter * wincmd w
+
+" Close NERDTree if it is the only buffer open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Open Tagbar on startup
+autocmd VimEnter * nested :call tagbar#autoopen(1)
+autocmd FileType * nested :call tagbar#autoopen(0)
