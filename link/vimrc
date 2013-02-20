@@ -49,6 +49,9 @@ let g:ctrlp_map = '<c-p>'
 " NerdTree
 nmap \e :NERDTreeToggle<CR>
 
+" Tagbar
+nmap \t :TagbarToggle<CR>
+
 " Poweline
 set laststatus=2
 set encoding=utf-8
