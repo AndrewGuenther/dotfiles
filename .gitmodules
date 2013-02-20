@@ -1,3 +1,19 @@
 [submodule "link/oh-my-zsh"]
 	path = link/oh-my-zsh
-	url = git@github.com:AndrewGuenther/oh-my-zsh.git
+   url = git@github.com:AndrewGuenther/oh-my-zsh.git
+
+[submodule "link/vim/bundle/numbers.vim"]
+   path = link/vim/bundle/numbers.vim
+   url = git://github.com/myusuf3/numbers.vim.git 
+
+[submodule "link/vim/bundle/vim-powerline"]
+   path = link/vim/bundle/vim-powerline
+   url = git://github.com/Lokaltog/vim-powerline.git
+
+[submodule "link/vim/bundle/vim-fugitive"]
+   path = link/vim/bundle/vim-fugitive
+   url = git://github.com/tpope/vim-fugitive.git
+
+[submodule "link/vim/bundle/ctrlp.vim"]
+   path = link/vim/bundle/ctrlp.vim
+   url = git://github.com/kien/ctrlp.vim.git
