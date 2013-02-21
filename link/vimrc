@@ -26,8 +26,9 @@ set nu
 " Set folding to syntax mode and add shortcut
 set foldmethod=syntax
 set foldlevelstart=50
+set foldnestmax=1
 nmap \f za
-nmap \F zR
+nmap \Ff zR
 nmap \FF zM
 
 " Color lines which are too long
