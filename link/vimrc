@@ -68,9 +68,7 @@ set encoding=utf-8
 map <tab> mzgg=G`z<CR>
 
 " Open NERDTree on startup
-autocmd VimEnter * NERDTreeToggle
-autocmd BufEnter * NERDTreeMirror
-
+autocmd vimenter * if !argc() | NERDTree | endif
 autocmd VimEnter * wincmd w
 
 " Close NERDTree if it is the only buffer open

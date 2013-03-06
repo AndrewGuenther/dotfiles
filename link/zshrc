@@ -43,3 +43,4 @@ export PATH=/home/andrew/.rvm/gems/ruby-1.9.2-p320/bin:/home/andrew/.rvm/gems/ru
 
 # Aliases
 alias g="git "
+alias pdf="evince 2> /dev/null"
