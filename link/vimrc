@@ -1,3 +1,6 @@
+" Set nocp
+set nocp
+
 " Set tabs
 set tabstop=3
 set shiftwidth=3
