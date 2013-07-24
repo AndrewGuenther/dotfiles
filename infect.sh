@@ -25,7 +25,7 @@ mkdir ~/.olddots
 for f in $DIR/link/*; do
    if [ -f ~/.${f##*/} ]; then
       cp ~/.${f##*/} ~/.olddots/.${f##*/}
+      rm ~/.${f##*/}
    fi
-   rm ~/.${f##*/}
    ln -s $f ~/.${f##*/}
 done
