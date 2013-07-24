@@ -45,6 +45,12 @@ endif
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.zsh-theme set ft=sh
 
+" Ignore numbers.vim if version < 7.3
+let g:pathogen_disabled = []
+if version < 703
+   call add(g:pathogen_disabled, 'numbers.vim')
+endif
+
 " Run Pathogen
 execute pathogen#infect()
 
