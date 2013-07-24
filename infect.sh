@@ -12,6 +12,9 @@ sudo chsh -s /bin/zsh $USER
 git submodule init
 git submodule update
 
+# Add my zsh theme to oh-my-zsh with a symbolic link
+ln -s $DIR/special/my.zsh-theme $DIR/link/oh-my-zsh/custom/my.zsh-theme
+
 # Create a directory to put old dotfiles
 if [ -d ~/.olddots ]; then
    rm -rI ~/.olddots
