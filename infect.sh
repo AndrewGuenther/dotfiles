@@ -3,11 +3,10 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 command -v apt-get && INSTALL="sudo apt-get install "
-command -v yum && INSTALL="sudo yum install "
+command -v yum && INSTALL="sudo yum -y install "
 
-while read dep; do
-   $INSTALL $dep
-done < dependencies.list
+$INSTALL $(cat dependencies.list)
+
 
 git submodule init
 git submodule update
