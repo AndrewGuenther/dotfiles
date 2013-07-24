@@ -7,6 +7,7 @@ command -v yum && INSTALL="sudo yum -y install "
 
 $INSTALL $(cat dependencies.list)
 
+sudo chsh -s /bin/zsh $USER
 
 git submodule init
 git submodule update
