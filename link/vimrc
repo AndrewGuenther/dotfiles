@@ -18,10 +18,7 @@ colorscheme molokai
 
 " Smart home and smart end
 noremap <expr> <Home> (col('.') == matchend(getline('.'), '^\s*')+1 ? '0' : '^')
-noremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$' : 'g_')
-vnoremap <expr> <End> (col('.') == match(getline('.'), '\s*$') ? '$h' : 'g_')
 imap <Home> <C-o><Home>
-imap <End> <C-o><End>
 
 " Line numbers
 set nu
@@ -36,9 +33,9 @@ nmap \FF zM
 
 " Color lines which are too long
 if exists('+colorcolumn')
-   set colorcolumn=100
+   set colorcolumn=80
 else
-   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
+   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 " Set JSON filed to be handled as javascript
@@ -84,5 +81,5 @@ autocmd VimEnter * wincmd w
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Open Tagbar on startup
-autocmd VimEnter * nested :call tagbar#autoopen(1)
-autocmd FileType * nested :call tagbar#autoopen(0)
+" autocmd VimEnter * nested :call tagbar#autoopen(1)
+" autocmd FileType * nested :call tagbar#autoopen(0)
