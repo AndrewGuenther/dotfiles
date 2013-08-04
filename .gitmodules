@@ -20,3 +20,6 @@
 [submodule "link/oh-my-zsh"]
 	path = link/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "link/vim/bundle/vim-markdown"]
+	path = link/vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
