@@ -54,3 +54,4 @@ export PATH=$PATH
 # Aliases
 alias g="git "
 alias pdf="evince 2> /dev/null"
+alias fucking="sudo "

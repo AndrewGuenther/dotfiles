@@ -29,6 +29,7 @@
     a = add
     c = commit
     p = pull
+    tug = pull --rebase
     d = diff
     st = stash
     sp = stash pop
