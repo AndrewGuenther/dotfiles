@@ -1,14 +1,5 @@
 # Andrew's zshrc
 
-# Source any old rc files
-if [[ -a $HOME/.bashrc ]]; then
-   source $HOME/.bashrc
-fi
-
-if [[ -a $HOME/.olddots/.zshrc ]]; then
-   source $HOME/.olddots/.zshrc
-fi
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -55,3 +46,18 @@ export PATH=$PATH
 alias g="git "
 alias pdf="evince 2> /dev/null"
 alias fucking="sudo "
+
+# Source the local rc file
+if [[ -a $HOME/.myzshrc ]]; then
+   source $HOME/.myzshrc
+fi
+
+# Source any old rc files
+if [[ -a $HOME/.bashrc && $INCLUDE_OLD_RCS -eq 1 ]]; then
+   source $HOME/.bashrc
+fi
+
+if [[ -a $HOME/.olddots/.zshrc && $INCLUDE_OLD_RCS -eq 1 ]]; then
+   source $HOME/.olddots/.zshrc
+fi
+
