@@ -42,8 +42,8 @@ function virtualenv_info {
    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
-PROMPT='%{$fg_bold[magenta]%}%n%{$reset_color%} at %{$fg_bold[cyan]%}%m%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) $(git_info)
-$(virtualenv_info)$(prompt_char) '
+PROMPT='%{$fg_bold[magenta]%}%n%{$reset_color%} at %{$fg_bold[cyan]%}%m%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) $(virtualenv_info)$(git_info)
+$(prompt_char) '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg_bold[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
