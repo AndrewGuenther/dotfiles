@@ -1,31 +1,79 @@
 #!/bin/bash
+TARGET=$1
+
+if [ "$TARGET" == "" ]; then
+   TARGET="all"
+fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-command -v apt-get && INSTALL="sudo apt-get install "
-command -v yum && INSTALL="sudo yum -y install "
+if [ "$TARGET" == "dependencies" -o "$TARGET" == "all" ]; then
+   echo "=== RETRIEVING DEPENDENCIES ==="
 
-$INSTALL $(cat dependencies.list)
+   command -v apt-get && INSTALL="sudo apt-get install " && PKMN="apt"
+   command -v yum && INSTALL="sudo yum -y install " && PKMN="yum"
+   command -v pacman && INSTALL="sudo pacman -S " && PKMN="pacman"
 
-sudo chsh -s /bin/zsh $USER
+   while read line; do
+      args=($line)
+      pkg=${line[0]}
+      pkmn=${line[1]}
 
-git submodule init
-git submodule update
+      if [ -z "$pkmn" -o "$pkmn" == "$PKMN" ]; then
+         $INSTALL $pkg
+      fi
+   done < packages.list
 
-# Add my zsh theme to oh-my-zsh with a symbolic link
-ln -s $DIR/special/my.zsh-theme $DIR/link/oh-my-zsh/custom/my.zsh-theme
-
-# Create a directory to put old dotfiles
-if [ -d ~/.olddots ]; then
-   rm -rI ~/.olddots
+   echo
 fi
-mkdir ~/.olddots
 
-# Link dotfiles
-for f in $DIR/link/*; do
-   if [ -f ~/.${f##*/} ]; then
-      cp ~/.${f##*/} ~/.olddots/.${f##*/}
-      rm ~/.${f##*/}
+if [ "$TARGET" == "all" ]; then
+   echo "=== RETRIEVING SUBMODULES ==="
+
+   git submodule init
+   git submodule update
+
+   echo
+fi
+
+if [ "$TARGET" == "all" -o "$TARGET" == "special" ]; then
+   echo "=== COPYING SPECIFIC FILES ==="
+
+   while read line; do
+      args=($line)
+      src=${args[0]}
+      dest="$(eval echo ${args[1]})"
+      echo "$src -> $dest"
+      cp $DIR/specific/$src $dest
+   done < specific.list
+
+   echo
+fi
+
+if [ "$TARGET" == "all" -o "$TARGET" == "link" ]; then
+   echo "=== LINKING DOTFILES ==="
+
+   # Create a directory to put old dotfiles
+   if [ -d ~/.olddots ]; then
+      echo "FAIL: A dotfiles backup already exists! Aborting dotfiles copy."
+   else
+      mkdir ~/.olddots
+
+      # Link dotfiles
+      for f in $DIR/link/*; do
+         if [ -f ~/.${f##*/} ]; then
+            cp ~/.${f##*/} ~/.olddots/.${f##*/}
+            rm ~/.${f##*/}
+         fi
+         echo "$f -> ~/.${f##*/}"
+         ln -s $f ~/.${f##*/}
+      done
    fi
-   ln -s $f ~/.${f##*/}
-done
+
+   echo
+fi
+
+if [ "$TARGET" == "all" -a $DIR/custom.sh ]; then
+   echo "=== EXECUTING CUSTOM SCRIPT ==="
+   source $DIR/custom.sh
+fi
