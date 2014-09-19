@@ -1,3 +1,1 @@
-my.zsh-theme $DIR/link/oh-my-zsh/custom/
-ssh/id_rsa.pub ~/.ssh/
-ssh/config ~/.ssh/
+my.zsh-theme link/oh-my-zsh/custom/
