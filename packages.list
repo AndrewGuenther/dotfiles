@@ -2,3 +2,6 @@ zsh
 vim
 git
 ctags
+build-essential
+cmake
+python-dev

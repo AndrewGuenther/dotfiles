@@ -37,3 +37,13 @@
    path = link/vim/bundle/vim-airline
    url = git://github.com/bling/vim-airline.git
    branch = master
+
+[submodule "link/vim/bundle/YouCompleteMe"]
+   path = link/vim/bundle/YouCompleteMe
+   url = git://github.com/Valloric/YouCompleteMe.git
+   branch = master
+
+[submodule "link/vim/bundle/syntastic"]
+   path = link/vim/bundle/syntastic
+   url = git://github.com/scrooloose/syntastic.git
+   branch = master
