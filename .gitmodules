@@ -30,5 +30,9 @@
 
 [submodule "link/vim/bundle/vim-markdown"]
 	path = link/vim/bundle/vim-markdown
-   url = https://github.com/plasticboy/vim-markdown.git
+   url = git://github.com/plasticboy/vim-markdown.git
    branch = master
+
+[submodule "link/vim/bundle/vim-coffee-script"]
+	path = link/vim/bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
