@@ -67,9 +67,12 @@ nmap \e :NERDTreeToggle<CR>
 " Tagbar
 nmap \t :TagbarToggle<CR>
 
-" Poweline
+" Airline
 set laststatus=2
 set encoding=utf-8
+let g:airline_theme="dark"
+let g:airline_left_sep=' '
+let g:airline_right_sep=' '
 
 " Re-indent entire file
 map <tab> mzgg=G`z<CR>
