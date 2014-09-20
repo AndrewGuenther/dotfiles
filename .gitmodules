@@ -32,3 +32,8 @@
    path = link/vim/bundle/vim-markdown
    url = git://github.com/plasticboy/vim-markdown.git
    branch = master
+
+[submodule "link/vim/bundle/vim-airline"]
+   path = link/vim/bundle/vim-airline
+   url = git://github.com/bling/vim-airline.git
+   branch = master
