@@ -1,25 +1,34 @@
 [submodule "link/vim/bundle/numbers.vim"]
    path = link/vim/bundle/numbers.vim
    url = git://github.com/myusuf3/numbers.vim.git 
+   branch = master
 
 [submodule "link/vim/bundle/vim-powerline"]
    path = link/vim/bundle/vim-powerline
    url = git://github.com/Lokaltog/vim-powerline.git
+   branch = master
 
 [submodule "link/vim/bundle/vim-fugitive"]
    path = link/vim/bundle/vim-fugitive
    url = git://github.com/tpope/vim-fugitive.git
+   branch = master
 
 [submodule "link/vim/bundle/ctrlp.vim"]
    path = link/vim/bundle/ctrlp.vim
    url = git://github.com/kien/ctrlp.vim.git
+   branch = master
 
 [submodule "link/vim/bundle/tagbar"]
    path = link/vim/bundle/tagbar
    url = git://github.com/majutsushi/tagbar.git
+   branch = master
+
 [submodule "link/oh-my-zsh"]
 	path = link/oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
+   url = git://github.com/robbyrussell/oh-my-zsh.git
+   branch = master
+
 [submodule "link/vim/bundle/vim-markdown"]
 	path = link/vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
+   url = https://github.com/plasticboy/vim-markdown.git
+   branch = master
