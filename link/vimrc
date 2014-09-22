@@ -48,6 +48,9 @@ let g:pathogen_disabled = []
 if version < 703
    call add(g:pathogen_disabled, 'numbers.vim')
 endif
+if version < 704
+   call add(g:pathogen_disabled, 'YouCompleteMe')
+endif
 
 " Run Pathogen
 execute pathogen#infect()
