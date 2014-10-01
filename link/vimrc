@@ -40,7 +40,7 @@ else
 endif
 
 " Set JSON filed to be handled as javascript
-autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.json set ft=json
 autocmd BufNewFile,BufRead *.zsh-theme set ft=sh
 
 " Ignore numbers.vim if version < 7.3

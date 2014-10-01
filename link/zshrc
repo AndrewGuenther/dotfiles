@@ -48,6 +48,9 @@ alias pdf="evince 2> /dev/null"
 alias fucking="sudo "
 alias activate="source venv/bin/activate"
 alias g~='$(git rev-parse --show-toplevel)'
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
+alias install="sudo apt-get install"
 
 # Source the local rc file
 if [[ -a $HOME/.myzshrc ]]; then
