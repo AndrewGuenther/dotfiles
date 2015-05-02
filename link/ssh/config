@@ -1,12 +1,1 @@
-Host unix2
-   HostName unix2.csc.calpoly.edu
-   User aguenthe
 
-Host unix3
-   HostName unix3.csc.calpoly.edu
-   User aguenthe
-
-Host prius
-   HostName prius.drivingbuddy.com
-   Port 8010
-   User andrew
