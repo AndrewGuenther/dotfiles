@@ -1,5 +1,7 @@
 # Andrew's zshrc
 
+source $HOME/.bashrc
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -31,16 +33,12 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search nyan virtualenv docker)
+plugins=(git history-substring-search docker)
 
 # Enable 256 colors
 export TERM="xterm-256color"
 
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-export PATH=/usr/local/cuda-5.5/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-5.5/lib64:$LD_LIBRARY_PATH
 
 # Aliases
 alias g="git "
@@ -57,15 +55,3 @@ if [[ -a $HOME/.myzshrc ]]; then
    source $HOME/.myzshrc
 fi
 
-# Source any old rc files
-if [[ -a $HOME/.bashrc && $INCLUDE_OLD_RCS -eq 1 ]]; then
-   source $HOME/.bashrc
-fi
-
-if [[ -a $HOME/.olddots/.zshrc && $INCLUDE_OLD_RCS -eq 1 ]]; then
-   source $HOME/.olddots/.zshrc
-fi
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

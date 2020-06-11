@@ -1,2 +1,2 @@
 sudo chsh -s /bin/zsh $USER
-./link/vim/bundle/YouCompleteMe/install.sh
+cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clangd-completer

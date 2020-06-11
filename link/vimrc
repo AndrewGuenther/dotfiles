@@ -97,3 +97,6 @@ let g:vim_markdown_folding_disabled=1
 " Disable problematic vim-go settings
 let g:go_fmt_fail_silently = 1
 let g:go_fmt_autosave = 0
+
+" Set backspace behavior
+set backspace=indent,eol,start
