@@ -23,11 +23,6 @@
    url = git://github.com/robbyrussell/oh-my-zsh.git
    branch = master
 
-[submodule "link/vim/bundle/vim-coffee-script"]
-   path = link/vim/bundle/vim-coffee-script
-   url = git://github.com/kchmck/vim-coffee-script.git
-   branch = master
-
 [submodule "link/vim/bundle/vim-markdown"]
    path = link/vim/bundle/vim-markdown
    url = git://github.com/plasticboy/vim-markdown.git
@@ -38,16 +33,3 @@
    url = git://github.com/bling/vim-airline.git
    branch = master
 
-[submodule "link/vim/bundle/YouCompleteMe"]
-   path = link/vim/bundle/YouCompleteMe
-   url = git://github.com/Valloric/YouCompleteMe.git
-   branch = master
-
-[submodule "link/vim/bundle/syntastic"]
-   path = link/vim/bundle/syntastic
-   url = git://github.com/scrooloose/syntastic.git
-   branch = master
-[submodule "link/vim/bundle/vim-go"]
-	path = link/vim/bundle/vim-go
-	url = git://www.github.com/fatih/vim-go.git
-	branch = master

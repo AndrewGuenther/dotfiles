@@ -48,3 +48,4 @@
 
 [core]
 	editor = vim
+	excludesfile = /home/andrew/.gitignore
