@@ -26,3 +26,6 @@
 [submodule "vim/.vim/bundle/nerdtree"]
 	path = vim/.vim/bundle/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/.vim/bundle/vim-toml"]
+	path = vim/.vim/bundle/vim-toml
+	url = https://github.com/cespare/vim-toml.git
