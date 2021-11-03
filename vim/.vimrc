@@ -48,27 +48,15 @@ let g:pathogen_disabled = []
 if version < 703
    call add(g:pathogen_disabled, 'numbers.vim')
 endif
-if version < 704
-   call add(g:pathogen_disabled, 'YouCompleteMe')
-endif
 
 " Run Pathogen
 execute pathogen#infect()
-
-" Configure localvimrc to not ask for confirmation
-let g:localvimrc_ask=0
-
-" Syntastic config
-"let g:syntastic_check_on_open=1
 
 " Ctrl-P
 let g:ctrlp_map = '<c-p>'
 
 " NerdTree
 nmap \e :NERDTreeToggle<CR>
-
-" Tagbar
-nmap \t :TagbarToggle<CR>
 
 " Airline
 set laststatus=2
@@ -86,10 +74,6 @@ autocmd VimEnter * wincmd w
 
 " Close NERDTree if it is the only buffer open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" Open Tagbar on startup
-" autocmd VimEnter * nested :call tagbar#autoopen(1)
-" autocmd FileType * nested :call tagbar#autoopen(0)
 
 " Disable vim-markdown folding
 let g:vim_markdown_folding_disabled=1
