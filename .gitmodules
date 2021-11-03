@@ -13,11 +13,6 @@
    url = git://github.com/kien/ctrlp.vim.git
    branch = master
 
-[submodule "link/oh-my-zsh"]
-	path = zsh/.oh-my-zsh
-   url = git://github.com/robbyrussell/oh-my-zsh.git
-   branch = master
-
 [submodule "link/vim/bundle/vim-markdown"]
 	path = vim/.vim/bundle/vim-markdown
    url = git://github.com/plasticboy/vim-markdown.git
