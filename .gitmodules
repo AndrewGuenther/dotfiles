@@ -1,35 +1,33 @@
 [submodule "link/vim/bundle/numbers.vim"]
-   path = link/vim/bundle/numbers.vim
+	path = vim/.vim/bundle/numbers.vim
    url = git://github.com/myusuf3/numbers.vim.git 
    branch = master
 
 [submodule "link/vim/bundle/vim-fugitive"]
-   path = link/vim/bundle/vim-fugitive
+	path = vim/.vim/bundle/vim-fugitive
    url = git://github.com/tpope/vim-fugitive.git
    branch = master
 
 [submodule "link/vim/bundle/ctrlp.vim"]
-   path = link/vim/bundle/ctrlp.vim
+	path = vim/.vim/bundle/ctrlp.vim
    url = git://github.com/kien/ctrlp.vim.git
    branch = master
 
-[submodule "link/vim/bundle/tagbar"]
-   path = link/vim/bundle/tagbar
-   url = git://github.com/majutsushi/tagbar.git
-   branch = master
-
 [submodule "link/oh-my-zsh"]
-   path = link/oh-my-zsh
+	path = zsh/.oh-my-zsh
    url = git://github.com/robbyrussell/oh-my-zsh.git
    branch = master
 
 [submodule "link/vim/bundle/vim-markdown"]
-   path = link/vim/bundle/vim-markdown
+	path = vim/.vim/bundle/vim-markdown
    url = git://github.com/plasticboy/vim-markdown.git
    branch = master
 
 [submodule "link/vim/bundle/vim-airline"]
-   path = link/vim/bundle/vim-airline
+	path = vim/.vim/bundle/vim-airline
    url = git://github.com/bling/vim-airline.git
    branch = master
 
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
+	url = https://github.com/preservim/nerdtree.git
