@@ -50,3 +50,6 @@ fi
 
 # Initialize starship
 eval "$(starship init zsh)"
+
+# Initialize homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
