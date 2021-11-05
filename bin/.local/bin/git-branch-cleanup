@@ -1,0 +1,10 @@
+#!/bin/bash
+git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs -r git branch -d
+
+while getopts "p" opt; do
+   case "${opt}" in
+      p)
+         git remote prune origin
+         ;;
+   esac
+done
