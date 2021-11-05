@@ -1,4 +1,4 @@
-right_format = """$cmd_duration$time$battery"""
+right_format = """$cmd_duration$time"""
 
 [time]
 disabled = false
@@ -22,6 +22,9 @@ symbol = " "
 [aws]
 symbol = "  "
 format = 'as [$symbol($profile )(\[$duration\])]($style)'
+
+[battery]
+disabled = true
 
 [conda]
 symbol = " "
