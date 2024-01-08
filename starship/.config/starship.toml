@@ -57,6 +57,7 @@ disabled = true
 
 [hg_branch]
 symbol = " "
+disabled = true
 
 [java]
 symbol = " "

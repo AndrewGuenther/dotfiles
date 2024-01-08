@@ -49,3 +49,7 @@
 [core]
 	editor = vim
 	excludesfile = /home/andrew/.gitignore
+[pager]
+	branch = false
+[push]
+	default = current
